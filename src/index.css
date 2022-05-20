@@ -1,0 +1,31 @@
+/* TODO Add site wide styles */
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #403F4F; */
+    /* background-color: black; */
+    /* color: white; */
+}
+
+.nav{
+    position:sticky;
+    top:0px;
+}
+
+/* .pSide{
+    height:100vw;
+} */
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bodyHold{
+    display:flex;
+    flex-direction:row;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

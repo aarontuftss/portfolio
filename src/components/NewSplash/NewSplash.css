@@ -1,0 +1,162 @@
+/* .item{
+    width:100%;
+    height:100;
+} */
+.each-slide > div {
+    max-width: 30vw;
+}
+
+.linkB{
+    width: 200px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    border: solid black 1px;
+    transition: all 0.5s;
+}
+
+.linkB1{
+    width: 100px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    border: solid black 1px;
+    transition: all 0.5s;
+}
+
+.linkB:hover,.linkB1:hover{
+    background-color: rgba(128, 185, 255, 1);
+}
+
+
+.bg-wrap{
+    position: relative;
+    width:100%;
+    height:93vh;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(73, 122, 182, 0.5); */
+    background-color: rgba(128, 185, 255, 1);
+}
+.bg-wrap > img{
+    position: absolute;
+    top:0;
+    Left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.mainCenter{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    /* background-color:whitesmoke; */
+    z-index:15;
+}
+
+.mainCenter > * {
+    background-color: lightgrey;
+    box-sizing:border-box;
+    padding: 5px;
+    border: solid transparent 1px;
+    border-radius: 7px;
+    cursor: default;
+
+}
+
+.slide-Container > *{
+    width:70%;
+}
+
+.slide-container{
+    background-color:rgba(73, 122, 182, 1);
+    width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.react-slideshow-container .nav[data-type="prev"] span {
+  margin-left: 5px;
+  border-right: none;
+  border-top: none;
+}
+.react-slideshow-container .nav[data-type="next"] span {
+  margin-right: 5px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.react-slideshow-container + div.indicators > div:last-of-type {
+  margin-right: 10px;
+}
+
+.react-slideshow-container{
+    width:60vw;
+    min-width:600px;
+    height:30vh;
+    /* padding: 25px; */
+    background-color:rgba(73, 122, 182, 0);
+    border-radius:7px;
+    padding:5px;
+    /* padding-bottom:10px; */
+}
+
+.each-slide{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.each-slide > div {
+    display:flex;
+    flex-direction:column;
+    margin-left: 3vw;
+}
+
+.each-slide > * {
+    color:whitesmoke;
+}
+
+.pImg1{
+    margin-top:15px;
+    width:200px;
+    height:150px;
+    border:solid black 1px;
+    box-sizing: border-box;
+}
+
+.pImg4{
+    width:100px;
+    height:100px;
+    border:solid black 1px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* .mainCenter > h1,h5,h4{
+    background-color: transparent;
+    border:solid transparent 1px;
+} */
+
+.ttext{
+    background-color: rgba(73, 122, 182, 1);
+    color:whitesmoke;
+}

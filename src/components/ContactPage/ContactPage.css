@@ -1,0 +1,21 @@
+.cHolder{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: whitesmoke;
+    height: 87vh;
+    width:100%;
+    justify-content: center;
+}
+
+.cBox{
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 7px;
+    border: solid black 1px;
+    text-align:center;
+}
+
+.cBox > * {
+    color: black;
+}
