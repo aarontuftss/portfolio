@@ -1,6 +1,6 @@
 {
-  "homepage": "https://aarontufts.me",
   "name": "frontend",
+  "homepage": "https://aarontufts.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
