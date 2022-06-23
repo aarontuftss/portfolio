@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {Slide} from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
-// import { NavLink, Link } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
 import './NewSplash.css'
 import one from './images/1.png'
 import two from './images/2.png'
@@ -22,19 +20,11 @@ import test1 from '../../images/test1.png'
 import test2 from '../../images/test2.png'
 import ttt from '../../images/ttt.png'
 
-// import Navigation from '../Navigation'
 
-function NewSplash(props) {
+function NewSplash() {
     const [ySpeed, setYspeed] = useState(0)
     const [xSpeed, setXspeed] = useState(0)
-    // const [showContact, setShowContact] = useState(false)
-    const {test} = props
 
-    console.log(test)
-
-    useEffect(() => {
-        console.log('hi')
-    }, [test]);
 
     function parallax(e){
         const imgs = document.querySelectorAll(['.item'])
@@ -154,15 +144,6 @@ function NewSplash(props) {
                 </div>
                 <h5 className='ttext'>Salt Lake City, Utah - App Academy</h5>
             </div>
-
-                {/* <div className='cBox' hidden={(!test)}>
-                    <h1>Contact Me</h1>
-                    <p>Email: jonathontufts.pro@gmail.com</p>
-                    <p>Phone: (702)-810-2333</p>
-                    <p>Email: jonathontufts.pro@gmail.com</p>
-
-                </div> */}
-            
 
         </div>
     );

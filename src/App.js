@@ -33,23 +33,18 @@ function App() {
             <img className='sIcon' alt='social icon' src='https://img.icons8.com/ios-filled/344/github.png'></img>
             <img className='sIcon2' alt='social icon' src='https://img.icons8.com/ios-filled/344/linkedin-circled--v1.png'></img>
           </div>
-          {/* <NavLink className='contactB' to='/contact'>Contact</NavLink> */}
-          <button className='contactB' onClick={() => {setShowContact(!showContact); console.log(showContact, 'hi')}}>{cButtonText}</button>
+          <a href="mailto: aarontuftss@gmail.com" className="contactB">Send Email</a>
         </li>
       </ul>
         <div className='bodyHold'>
-          {/* <ProjectsHolder className='pSide'/> */}
-          {/* {isLoaded && ( */}
             <Switch>
               <Route exact path="/">
-                {/* <SplashPage /> */}
                 <NewSplash test={showContact}/>
               </Route>
               <Route exact path="/contact">
                 <ContactPage/>
               </Route>
             </Switch>
-          {/* )} */}
         </div>
     </>
   );
