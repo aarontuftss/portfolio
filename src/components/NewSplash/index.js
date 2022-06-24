@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Slide} from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
@@ -15,10 +15,13 @@ import nine from './images/9.png'
 import ten from './images/10.png'
 import eleven from './images/11.png'
 import twelve from './images/12.png'
-import largeImg from '../../images/large-clone.png'
-import test1 from '../../images/test1.png'
-import test2 from '../../images/test2.png'
-import ttt from '../../images/ttt.png'
+
+
+
+import bbv from '../../images/bbv.png'
+import wine from '../../images/wine.png'
+import email from '../../images/email.png'
+import audio from '../../images/audio.png'
 
 
 function NewSplash() {
@@ -28,7 +31,6 @@ function NewSplash() {
 
     function parallax(e){
         const imgs = document.querySelectorAll(['.item'])
-        console.log(imgs)
         imgs.forEach(item => {
             const speed = item.getAttribute('dataspeed')
             
@@ -48,7 +50,6 @@ function NewSplash() {
         arrows: true,
         pauseOnHover: true,
         onChange: (oldIndex, newIndex) => {
-            console.log(`slide transition from ${oldIndex} to ${newIndex}`);
         }
     };
     
@@ -73,70 +74,109 @@ function NewSplash() {
                 
 
                 <h1 className='ttext'>Aaron Tufts | Full Stack Engineer</h1>
-                <h4 className='ttext'>Javascript - SQL - Postgresql - React.js - Express.js - Node.js - Python - Redux.js - Flask - SQLAlchemy - HTML5 - CSS </h4>
-                <div className='slide-container' hidden={test}>
-                    <div className='cBox' hidden={(!test)}>
-                        <h1>Contact Me</h1>
-                        <p>Email: aarontuftss@gmail.com</p>
-                        <p>Phone: (702)-810-2333</p>
 
+                <div className='mobileWrap'>
+                    <div className='mobileheader'>Recent Projects</div>
+
+                    <div className='projectCard'>
+                        <img className='mobileImg' src={bbv} alt=''></img>
+                        <div className='mobileText'>
+                            <h1>- Big Bear Visits -</h1>
+                            <h1>Express / React</h1>
+                            <h1>Scalable Vacation Rental Software Themed In Big Bear Lake, CA</h1>
+                        </div>
                     </div>
-                    <Slide {...properties} hidden={test}>
+
+                    <div className='projectCard'>
+                        <img className='mobileImg' src={audio} alt=''></img>
+                        <div className='mobileText'>
+                            <h1>- AudioByte -</h1>
+                            <h1>Express / React</h1>
+                            <h1>Music Streaming Application With An Optimized User Interface</h1>
+                        </div>
+                    </div>
+
+
+                    <div className='projectCard'>
+                        <img className='mobileImg' src={wine} alt=''></img>
+                        <div className='mobileText'>
+                            <h1>- Wineaux -</h1>
+                            <h1>Flask / React</h1>
+                            <h1>Dynamic Social Media Platform For Discovering And Reviewing New Wines</h1>
+                        </div>
+                    </div>
+
+
+                    <div className='projectCard'>
+                        <img className='mobileImg' src={ email} alt=''></img>
+                        <div className='mobileText'>
+                            <h1>- Email Verification -</h1>
+                            <h1>Flask / JS & HTML</h1>
+                            <h1>Scalable Vacation Rental Software</h1>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <h4 className='ttext'>Javascript - SQL - Postgresql - React.js - Express.js - Node.js - Python - Redux.js - Flask - SQLAlchemy - HTML5 - CSS </h4>
+                
+                <div className='slide-container'>
+                    <Slide {...properties}>
                         <div className='each-slide'>
                             <div>
-                                <a href='https://large-medium.herokuapp.com/' target='_blank'><img src={largeImg} alt='projects' className='pImg1'></img></a>
+                                <a href='https://large-medium.herokuapp.com/' target='_blank'><img src={bbv} alt='projects' className='pImg1'></img></a>
                                 <a href='https://large-medium.herokuapp.com/' target='_blank' className='linkB' >Live Link</a>
                                 <a href='https://github.com/ethanchen7/Large' target='_blank' className='linkB' >Github Repo</a>
                             </div>
                             <div>
-                                <h3>Large - Medium Clone</h3>
+                                <h3>Big Bear Visits - Express / React</h3>
                                 {/* <p>A Medium replica including user auth, crud functionality, and more.</p> */}
-                                <p><strong>Features: </strong>CRUD Articles, Comments, Following, Account <br/>Creation & User Authorization</p>
-                                <p><strong>Stack: </strong>SQL - Postgresql - Node.js - Express.js - Pug - Javascript - HTML - CSS</p>
+                                <p>Integrated Google Maps API with the Geocode API and custom search functionality to dynamically present available properties based on user parameters.</p>
+                                <p>Designed dynamic data-visualizations with Javascript implemented algorithms based on all actions possible associated with the user’s profile.</p>
                             </div>
 
                         </div>
                         <div className='each-slide'>
                             <div>
-                                <a href='https://audiobyte.herokuapp.com/home' target='_blank' ><img src={test2} alt='projects' className='pImg1'></img></a>
+                                <a href='https://audiobyte.herokuapp.com/home' target='_blank' ><img src={audio} alt='projects' className='pImg1'></img></a>
                                 <a href='https://audiobyte.herokuapp.com/home' target='_blank' className='linkB' >Live Link</a>
                                 <a href='https://github.com/jonathontufts/audiobyte' target='_blank' className='linkB' >Github Repo</a>
                             </div>
                             <div>
-                                <h3>SoundTube Audio</h3>
+                                <h3>AudioByte - Express / React</h3>
                                 {/* <p>Audio streaming application. Features: crud - api usage - user auth </p> */}
-                                <p><strong>Features: </strong>CRUD Songs, Comments, Account Creation & User Authorization - DeezerAPI usage to listen to any song.</p>
-                                <p><strong>Stack: </strong>React.js - SQL - Postgresql - Node.js - Express.js - Javascript - HTML - CSS</p>
+                                <p>Designed a universal search component that queries both the local database and Deezer’s REST API allowing the user to find both  locally uploaded music as well as any song on major streaming platforms.</p>
+                                <p>Integrated React Player with Redux’s global store by dispatching actions only when sharing information across components and encapsulating music player data to give the user a seamless, uninterrupted experience.</p>
 
                             </div>
                             
                         </div>
                         <div className='each-slide'>
                             <div>
-                                <a href='https://chrome.google.com/webstore/detail/free-email-checker/pbghlnngciboeibjckhadpjhgpnhjcid?hl=en&authuser=0' target='_blank' ><img src={test1} alt='projects' className='pImg1'></img></a>
+                                <a href='https://chrome.google.com/webstore/detail/free-email-checker/pbghlnngciboeibjckhadpjhgpnhjcid?hl=en&authuser=0' target='_blank' ><img src={wine} alt='projects' className='pImg1'></img></a>
                                 <a href='https://chrome.google.com/webstore/detail/free-email-checker/pbghlnngciboeibjckhadpjhgpnhjcid?hl=en&authuser=0' target='_blank' className='linkB' >Live Link</a>
                                 <a href='https://github.com/jonathontufts/email-checker' target='_blank' className='linkB' >Github Repo</a>
                             </div>
                             <div>
-                                <h3>Email Verification</h3>
-                                <p><strong>Features: </strong>A chrome extension for verifying contact information conveniently.</p>
-                                <p><strong>Stack: </strong>Python - DnsPython - Flask - Javascript - HTML - CSS</p>
-                                {/* <p>A chrome extension for verifying contact information conveniently.</p> */}
-
+                                <h3>Wineaux - Flask / React</h3>
+                                <p>Ensured application security  through frontend and backend authentication measures allowing users to only access and make changes to their own records.</p>
+                                <p>Utilized Redux architecture’s unidirectional data flow with React for predictable state and reliable DOM rendering.</p>
                             </div>
-                            
+
                         </div>
                         <div className='each-slide'>
                             <div>
-                                <a href='https://chrome.google.com/webstore/detail/impossible-tic-tac-toe/apjkgbbgbhmffnepmobpimdnckoamaga?hl=en&authuser=0' target='_blank' ><img src={ttt} alt='projects' className='pImg4'></img></a>
-                                <a href='https://chrome.google.com/webstore/detail/impossible-tic-tac-toe/apjkgbbgbhmffnepmobpimdnckoamaga?hl=en&authuser=0' target='_blank' className='linkB1' >Live Link</a>
-                                {/* <a href='' target='_blank' className='linkB' >Github Repo</a> */}
+                                <a href='https://chrome.google.com/webstore/detail/free-email-checker/pbghlnngciboeibjckhadpjhgpnhjcid?hl=en&authuser=0' target='_blank' ><img src={email} alt='projects' className='pImg1'></img></a>
+                                <a href='https://chrome.google.com/webstore/detail/free-email-checker/pbghlnngciboeibjckhadpjhgpnhjcid?hl=en&authuser=0' target='_blank' className='linkB' >Live Link</a>
+                                <a href='https://github.com/jonathontufts/email-checker' target='_blank' className='linkB' >Github Repo</a>
                             </div>
                             <div>
-                                <h3>Tic-Tac-Toe Bot</h3>
-                                <p><strong>Features: </strong>A clever tic-tac-toe bot that plays to win. Available on the Chrome Store.</p>
-                                <p><strong>Stack: </strong> Javascript - HTML - CSS</p>
-                                {/* <p>A clever tic-tac-toe bot that plays to win. Available on the Chrome Store.</p> */}
+                                <h3>Email Verification - Flask / Javascript & HTML</h3>
+                                <p>Easily verify the deliveability of an email to any email address with this Google Chrome Extension - 30+ Active Users</p>
+                                <p>Successfuly deployed a Flask API on Python Anywhere to run a verification process on perameters defined by the user's input on the front end.</p>
+
                             </div>
                             
                         </div>
